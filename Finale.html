@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Finale</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    background: black;
+  }
+
+  #finale{
+
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    box-sizing:border-box;
+
+    background:black;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+
+}
+
+.content{
+
+    position:relative;
+    z-index:5;
+
+    width:min(90%, 900px);
+    max-width:900px;
+    max-height:100vh;
+    box-sizing:border-box;
+    padding:1rem;
+
+    text-align:center;
+
+    color:white;
+
+    font-family:Georgia,serif;
+    overflow-y:auto;
+    overflow-x:hidden;
+
+}
+
+.line{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:fadeUp 2s forwards;
+
+    font-size:clamp(0.95rem, 1.1vw + 0.7rem, 1.2rem);
+
+    line-height:1.5;
+
+    margin:12px 0;
+    word-wrap:break-word;
+    overflow-wrap:anywhere;
+
+}
+
+.line:nth-child(1){animation-delay:1s;}
+.line:nth-child(2){animation-delay:4s;}
+.line:nth-child(3){animation-delay:8s;}
+.line:nth-child(4){animation-delay:12s;}
+.line:nth-child(5){animation-delay:16s;}
+.line:nth-child(6){animation-delay:20s;}
+.line:nth-child(7){animation-delay:23s;}
+
+.final{
+
+    opacity:0;
+
+    animation:fadeUp 2s forwards;
+
+    animation-delay:24s;
+
+    font-size:clamp(1.4rem, 2.2vw + 1rem, 2.5rem);
+    margin:1rem 0;
+
+    color:rgb(250, 199, 154);
+
+    text-shadow:0 0 25px rgb(250, 199, 154);
+
+}
+
+.thanks{
+
+    opacity:0;
+
+    animation:fadeUp 2s forwards;
+
+    animation-delay:27s;
+
+    font-size:clamp(1.1rem, 1.6vw + 0.8rem, 1.7rem);
+    margin-top:0.75rem;
+
+    color:gold;
+
+    text-shadow:0 0 20px gold;
+
+}
+
+@media (max-width: 768px) {
+    #finale {
+        padding: 0.75rem;
+        align-items:flex-start;
+    }
+
+    .content {
+        width:100%;
+        padding:0.75rem;
+    }
+
+    .line {
+        margin:10px 0;
+        line-height:1.4;
+    }
+}
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+canvas{
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:1;
+
+}
+</style>
+<body>
+<section id="finale">
+    <div class="overlay"></div>
+
+    <div class="content">
+        <p class="line">
+            🌸 Happy Birthday, Pedhamummy! 🌸
+        </p>
+
+        <p class="line">
+          Today isn't just another day—it's a celebration of someone who has brought so much love, warmth, and happiness into our lives.
+        </p>
+
+        <p class="line">
+           Thank you for every smile that brightened our days, every word of encouragement that gave us confidence, and every act of kindness that made our family stronger. Your love and care have created countless memories that we will cherish forever.
+        </p>
+
+        <p class="line">
+           You have a wonderful way of making everyone around you feel special, and today it's our turn to celebrate the amazing person you are.
+        </p>
+
+        <p class="line">
+           May this new chapter of your life be filled with good health, endless joy, peaceful moments, exciting adventures, and dreams that come true. May every day bring you as much happiness as you have given to those around you.
+         </p>
+        <p class="line">
+            Thank you for being an incredible aunt, a caring soul, and a constant source of love and support.
+        </p>
+         <p class="line">
+            Happy Birthday once again, Pedhamummy. May your smile continue to brighten our lives for many years to come.
+         </p>
+        <h1 class="final">
+               With all our love,  
+            </h1>
+
+        <h2 class="thanks">
+           ❤️ Your Family ❤️   
+        </h2>
+    </div>
+
+    <canvas id="fireworks"></canvas>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.js"></script>
+<script>
+
+const container=document.getElementById("finale");
+
+const fireworks=new Fireworks.default(container,{
+
+    autoresize:true,
+
+    opacity:0.5,
+
+    acceleration:1.03,
+
+    friction:0.97,
+
+    gravity:1.2,
+
+    particles:90,
+
+    traceLength:3,
+
+    traceSpeed:10,
+
+    explosion:7,
+
+    intensity:30,
+
+    flickering:40,
+
+    hue:{
+        min:0,
+        max:360
+    }
+
+});
+
+//Start when the last message begins
+setTimeout(()=>{
+
+    fireworks.start();
+
+},23000);
+
+//Stop after 15 seconds
+setTimeout(()=>{
+
+    fireworks.stop();
+
+},38000);
+
+</script>
+</body>
+</html>
