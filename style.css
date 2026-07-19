@@ -212,6 +212,7 @@ h1{
     header{
         padding: 18px 12px;
         border-radius: 16px;
+     background:linear-gradient(to right, #fc5c5c, #d3926dd5);
     }
 
     /* Navigation */
