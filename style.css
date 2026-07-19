@@ -3,6 +3,10 @@
     min-height: 100vh;
     color: #5b2e1f;
     font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
   }
   header{ 
      background:linear-gradient(to right, #fc5c5c, #d3926dd5);
@@ -45,6 +49,16 @@ a {
     overflow: hidden;
     border: solid;
     margin-top: 20px;
+    max-width: 950px;
+    margin: 25px auto;
+}
+section p{
+    font-size: 20px;
+    line-height: 1.8;
+}
+h1{
+    font-size: clamp(2rem, 5vw, 3.8rem);
+}
  }
 
 .page-intro {
