@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Happy Birthday Pedhamummy ❤️</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+              <li><a href="birthday.html">Home </a></li>
+              <li><a href="memories.html">Memories</a></li>
+              <li><a href="moon .html">secret</a></li>
+          </ul>
+        </nav>
+        <h1> 🌸 Happy Birthday, Pedhamummy! 🌸</h1>
+    </header>
+<section>
+   
+
+ <p>
+    Today is all about celebrating a truly wonderful person who fills our lives with love, kindness, and countless beautiful memories.
+</p>
+<p>
+    This little website is a small gift created with lots of love, just for you. Every photo, every message, and every memory here is a reminder of how much you mean to our family.
+</p>
+<p>
+    Thank you for your endless care, your warm smile, your encouraging words, and the happiness you bring wherever you go. You have always been someone we can count on, and we are so grateful to have you in our lives.
+</p>
+<p>
+    As you begin another beautiful year, we wish you good health, endless happiness, success in everything you do, and countless moments that make you smile.
+</p>
+<p>
+     your time exploring this little surprise. Every section has been made with love, especially for you.
+</p>
+<p>
+    ✨ Happy Birthday once again! May your special day be as wonderful and beautiful as you are. ❤️
+</p>
+    </section>
+     <div id="petals-container"></div>
+     <script>
+        const container = document.getElementById("petals-container");
+
+function createPetal(){
+
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+
+    petal.innerHTML ="🌸";   
+
+    petal.style.left = Math.random() * window.innerWidth + "px";
+
+    petal.style.animationDuration = (6 + Math.random() * 4) + "s";
+
+    petal.style.fontSize = (18 + Math.random() * 18) + "px";
+
+    container.appendChild(petal);
+
+    petal.addEventListener("animationend", () => {
+        petal.remove();
+    });
+
+}
+
+// Create one petal every 500 ms
+setInterval(createPetal, 400);
+     </script>
+</body>
+</html>
